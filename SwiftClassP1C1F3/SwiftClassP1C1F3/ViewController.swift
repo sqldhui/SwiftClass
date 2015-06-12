@@ -8,9 +8,14 @@
 
 import UIKit
 
+let iPHONE4_DEV: Bool! = (UIScreen.mainScreen().bounds.size.height == 480 ? true : false)
+let iPHONE5_DEV: Bool! = (UIScreen.mainScreen().bounds.size.height == 568 ? true : false)
+let iPHONE6_DEV: Bool! = (UIScreen.mainScreen().bounds.size.height == 667 ? true : false)
+let iPHONE6P_DEV: Bool! = (UIScreen.mainScreen().bounds.size.height == 736 ? true : false)
+
 extension Double
 {
-    //转换
+    //转换(四舍五入)
     func format(f: String) -> String
     {
         return NSString(format: "%\(f)f", self) as String
@@ -108,6 +113,123 @@ class ViewController: UIViewController {
         {
             println("stringValue 存在值")
         }
+        
+        var numStr: String = "123"
+        var value1: Int? = numStr.toInt()
+        println(value1)
+        
+        var value2: Int! = numStr.toInt()
+        println(value2 + 6)
+        
+        let v1 = 10_000_000
+        println(v1)
+        
+        //typealias 类型别名 = 原始类型
+        typealias NewInt = Int32
+        var new_value: NewInt = 123
+        
+        //基本类型转换
+        var j: Int = 3
+        Double(j)//3.0
+        Float(j)//3.0
+        println("\(j)")
+        println("\(Double(j))")
+        println("\(Float(j))")
+        
+        /*
+        *当字符串第一位不为数字时, 转为0
+        *当字符串第一位为数字时, 直接转换为数字, 直到遇到非数字自负停止
+*/
+        var s: String = "2.156asd2"
+        println(s.toInt())
+        var s1 = s as NSString
+        println(s1)
+        println(s1.integerValue)
+        println(s1.doubleValue)
+        println(s1.floatValue)
+        
+        //运算符与表达式
+        var newString = "hello, " + "world"
+        var newString2 = ", swift"
+        let endChar: Character = "!"
+        println(newString + newString2)
+        
+        println(1...5)
+        for index in 1...5
+        {
+            print("index \(index); ")
+        }
+        println()
+        println(1..<5)
+        for index in 1..<5
+        {
+            print("index \(index); ")
+        }
+        println()
+        
+        //控制流
+        let count = 3_000
+        var naturalThings: String
+        switch count
+        {
+        case 0: naturalThings = "数字0"
+        case 1...3: naturalThings = "数字1-3"
+        case 4...9: naturalThings = "数字4-9"
+        case 10...99: naturalThings = "数字10-99"
+        case 100...9999: naturalThings = "数字100-9999"
+        default: naturalThings = "9999以上"
+        }
+        println(naturalThings)
+        
+        let number = 5
+        switch number
+        {
+        case 2,5,5,7:
+            println("这是一个质数")
+            fallthrough
+        case 5:
+            println("5")
+        default:
+            println("这是一个整数")
+        }
+        println(description)
+        
+        enum MapDirection
+        {
+            case North
+            case South
+            case East
+            case West
+            func simpleDescription() -> String
+            {
+                switch self
+                {
+                case .North: return "North"
+                case .South: return "South"
+                case .East: return "East"
+                case .West: return "West"
+                default: return String("unknow")
+                }
+            }
+        }
+        var directionToHead = MapDirection.West
+        
+        println(directionToHead.simpleDescription())
+        
+        struct Summation
+        {
+            var addend: Int
+            var augend: Int
+            func sum() -> Int
+            {
+                return addend + augend
+            }
+        }
+        let newStruct = Summation(addend: 6, augend: 8)
+        println(newStruct.sum())
+        
+        println((UIScreen.mainScreen().bounds.size.height))
+        println((iPHONE4_DEV))
     }
 
     override func didReceiveMemoryWarning() {

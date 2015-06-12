@@ -399,6 +399,7 @@
 				1837F79C1B29958D007E587B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1837F79D1B29958D007E587B /* Build configuration list for PBXNativeTarget "SwiftClassP1C1F3Tests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +408,7 @@
 				1837F79F1B29958D007E587B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
