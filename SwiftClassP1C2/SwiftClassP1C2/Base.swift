@@ -24,6 +24,11 @@ class Base
 
 class SubClass: Base
 {
+    override func getBaseName() -> String
+    {
+        return "New Base Class"
+    }
+    
     func getSubName() -> String
     {
         return getBaseName() + "的子类"

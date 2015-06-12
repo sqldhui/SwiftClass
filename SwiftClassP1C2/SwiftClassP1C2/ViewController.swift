@@ -119,6 +119,13 @@ func chooseFunction(backwards: Bool) -> (Int) -> Int
     return backwards ? reduce : increase
 }
 
+extension Double
+{
+    var cm: Double {return self / 100.0}
+    var km: Double {return self * 1000.0}
+    var m: Double {return self}
+}
+
 
 func mainFunction(input: Int) -> Int
 {
@@ -187,6 +194,27 @@ struct SwiftColor
 struct ViewPoint
 {
     var x = 0.0, y = 0.0
+}
+
+extension Int
+{
+    mutating func square()
+    {
+        self = self * self
+    }
+}
+
+extension Int
+{
+    subscript(index: Int) -> Int
+    {
+        var decimal = 1
+        for i in 0..<index
+        {
+            decimal *= 10
+        }
+        return (self / decimal) % 10
+    }
 }
 
 class ViewController: UIViewController {
@@ -381,6 +409,21 @@ class ViewController: UIViewController {
         
         var base = Base()
         println((base.baseName))
+        
+        var sub = SubClass()
+        println((sub.getBaseName()))
+        println((sub.getSubName()))
+        
+        let m1 = 10.cm
+        println("10 cm is \(m1) meters")
+        let m2 = 5.0.km
+        println("5 km is \(m2) meters")
+        
+        var someInt = 3
+        someInt.square()
+        println((someInt))
+        
+        println("987654321[0] \(987654321[0])")
     }
 
     override func didReceiveMemoryWarning() {
