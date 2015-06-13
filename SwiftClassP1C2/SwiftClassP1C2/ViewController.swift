@@ -695,6 +695,17 @@ class ViewController: UIViewController {
         var operation: DrinkOperation = DrinkOperation()
         var queue: NSOperationQueue = NSOperationQueue()
         queue.addOperation(operation)
+        
+        /*
+        DISPATCH_QUEUE_SERIAL (串行)
+        DISPATCH_QUEUE_CONCURRENT (并行)
+        
+        DISPATCH_QUEUE_PRIORITY_HIGH (优先级 高)
+        DISPATCH_QUEUE_PRIORITY_DEFAULT (优先级 正常)
+        DISPATCH_QUEUE_PRIORITY_LOW (优先级 低)
+        DISPATCH_QUEUE_PRIORITY_BACKGROUND (优先级 非常低)
+*/
+        
     }
 
     override func didReceiveMemoryWarning() {

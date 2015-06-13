@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SwiftClassP2C3/SwiftClassP2C3.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SwiftClassP1C2/SwiftClassP1C2.xcodeproj">
    </FileRef>
    <FileRef
