@@ -424,6 +424,20 @@ class ViewController: UIViewController {
         println((someInt))
         
         println("987654321[0] \(987654321[0])")
+        
+        println((2 as Int).toStringValue())
+        
+        var arr1 = [[Int](count: 6, repeatedValue: 0), [Int](count: 6, repeatedValue: 0)]
+        println("arr1: \(arr1)")
+        
+        var arr2: (Int, Int) = (2, 5)
+        println(arr2)
+        
+        println((5 as Int).toStringValue() + " is 5")
+        
+        println("apple".biological)
+        let apple = "apple"
+        println("\(apple) is a kind of " + apple.printStringrKinds())
     }
 
     override func didReceiveMemoryWarning() {

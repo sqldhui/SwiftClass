@@ -13,6 +13,7 @@
 		188A31C21B2A7AE1000D1C2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188A31C11B2A7AE1000D1C2B /* Images.xcassets */; };
 		188A31D11B2A7AE1000D1C2B /* SwiftClassP1C2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A31D01B2A7AE1000D1C2B /* SwiftClassP1C2Tests.swift */; };
 		188A31DB1B2ACBA1000D1C2B /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A31DA1B2ACBA1000D1C2B /* Base.swift */; };
+		EB8421A81B2BB74A006FAB71 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8421A71B2BB74A006FAB71 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		188A31CF1B2A7AE1000D1C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188A31D01B2A7AE1000D1C2B /* SwiftClassP1C2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassP1C2Tests.swift; sourceTree = "<group>"; };
 		188A31DA1B2ACBA1000D1C2B /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		EB8421A71B2BB74A006FAB71 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				188A31BA1B2A7AE1000D1C2B /* AppDelegate.swift */,
 				188A31BC1B2A7AE1000D1C2B /* ViewController.swift */,
 				188A31DA1B2ACBA1000D1C2B /* Base.swift */,
+				EB8421A71B2BB74A006FAB71 /* Extensions.swift */,
 				188A31BE1B2A7AE1000D1C2B /* Main.storyboard */,
 				188A31C11B2A7AE1000D1C2B /* Images.xcassets */,
 				188A31B81B2A7AE1000D1C2B /* Supporting Files */,
@@ -214,6 +217,7 @@
 				188A31DB1B2ACBA1000D1C2B /* Base.swift in Sources */,
 				188A31BD1B2A7AE1000D1C2B /* ViewController.swift in Sources */,
 				188A31BB1B2A7AE1000D1C2B /* AppDelegate.swift in Sources */,
+				EB8421A81B2BB74A006FAB71 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +407,7 @@
 				188A31D61B2A7AE1000D1C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		188A31D71B2A7AE1000D1C2B /* Build configuration list for PBXNativeTarget "SwiftClassP1C2Tests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +416,7 @@
 				188A31D91B2A7AE1000D1C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
