@@ -13,6 +13,8 @@
 		188A31C21B2A7AE1000D1C2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188A31C11B2A7AE1000D1C2B /* Images.xcassets */; };
 		188A31D11B2A7AE1000D1C2B /* SwiftClassP1C2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A31D01B2A7AE1000D1C2B /* SwiftClassP1C2Tests.swift */; };
 		188A31DB1B2ACBA1000D1C2B /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A31DA1B2ACBA1000D1C2B /* Base.swift */; };
+		EB69A9071B2BDFEA00972C38 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69A9061B2BDFEA00972C38 /* Protocols.swift */; };
+		EB69A9091B2BF78E00972C38 /* DrinkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69A9081B2BF78E00972C38 /* DrinkOperation.swift */; };
 		EB8421A81B2BB74A006FAB71 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8421A71B2BB74A006FAB71 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		188A31CF1B2A7AE1000D1C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188A31D01B2A7AE1000D1C2B /* SwiftClassP1C2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassP1C2Tests.swift; sourceTree = "<group>"; };
 		188A31DA1B2ACBA1000D1C2B /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		EB69A9061B2BDFEA00972C38 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		EB69A9081B2BF78E00972C38 /* DrinkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkOperation.swift; sourceTree = "<group>"; };
 		EB8421A71B2BB74A006FAB71 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,8 @@
 				188A31BC1B2A7AE1000D1C2B /* ViewController.swift */,
 				188A31DA1B2ACBA1000D1C2B /* Base.swift */,
 				EB8421A71B2BB74A006FAB71 /* Extensions.swift */,
+				EB69A9061B2BDFEA00972C38 /* Protocols.swift */,
+				EB69A9081B2BF78E00972C38 /* DrinkOperation.swift */,
 				188A31BE1B2A7AE1000D1C2B /* Main.storyboard */,
 				188A31C11B2A7AE1000D1C2B /* Images.xcassets */,
 				188A31B81B2A7AE1000D1C2B /* Supporting Files */,
@@ -214,7 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB69A9071B2BDFEA00972C38 /* Protocols.swift in Sources */,
 				188A31DB1B2ACBA1000D1C2B /* Base.swift in Sources */,
+				EB69A9091B2BF78E00972C38 /* DrinkOperation.swift in Sources */,
 				188A31BD1B2A7AE1000D1C2B /* ViewController.swift in Sources */,
 				188A31BB1B2A7AE1000D1C2B /* AppDelegate.swift in Sources */,
 				EB8421A81B2BB74A006FAB71 /* Extensions.swift in Sources */,

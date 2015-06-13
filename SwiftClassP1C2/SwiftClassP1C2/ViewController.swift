@@ -217,8 +217,209 @@ extension Int
     }
 }
 
-class ViewController: UIViewController {
+class EncryptionGenerator: CertificateGenerator
+{
+    var publicKey = "UUID"
+    let privateKey = "400"
+    
+    func certificate() -> String
+    {
+        return publicKey + privateKey
+    }
+}
 
+enum OnOffSwitch: CanBeModified
+{
+    case Off, On
+    mutating func canBeModified()
+    {
+        switch self
+        {
+        case .Off: self = On
+        case .On: self = Off
+        }
+    }
+}
+
+class ProtocolType
+{
+    var cer: CertificateGenerator
+    init(cerTemp: CertificateGenerator)
+    {
+        self.cer = cerTemp
+    }
+    func newCertificate() -> String
+    {
+        return cer.certificate()
+    }
+}
+
+class LoadingView: LoadingDelegate
+{
+    func didLoading()
+    {
+        println("did loading")
+    }
+}
+
+class RegistrationView
+{
+    var delegate: LoadingDelegate?
+    func registration()
+    {
+        let loading = LoadingView()
+        delegate = loading
+        delegate?.didLoading()
+    }
+}
+
+@objc class List
+{
+    var rows = 0
+    var dataSource: ListDataSource?
+    func increment()
+    {
+        if let count = dataSource?.numberOfRowInList?(rows)
+        {
+            rows += count
+        }
+        else if let count = dataSource?.fixedRrows
+        {
+            rows += count
+        }
+    }
+}
+
+class Exam
+{
+    let name: String?
+    init(na: String)
+    {
+        self.name = na
+        println("\(self.name) 被初始化")
+    }
+    deinit
+    {
+        println("\(self.name) 被反初始化")
+    }
+}
+
+class Teacher
+{
+    var tName: String
+    var student: Student?
+    init(name: String)
+    {
+        tName = name
+        println("老师 \(tName) 实例初始化完成")
+    }
+    func getName() -> String
+    {
+        return tName
+    }
+    deinit
+    {
+        println("老师 \(tName) 实例反初始化完成")
+    }
+}
+class Student
+{
+    var sName: String
+//    var teacher: Teacher?
+    weak var teacher: Teacher?
+    init(name: String)
+    {
+        sName = name
+        println("学生 \(sName) 实例初始化完成")
+    }
+    func getName() -> String
+    {
+        return sName
+    }
+    deinit
+    {
+        println("学生 \(sName) 实例反初始化完成")
+    }
+}
+
+class JsonElement
+{
+    let name: String
+    let jValue: String?
+    lazy var asJson: () -> String =
+    {
+        [unowned self] in
+        if let text = self.jValue
+        {
+            return "\(self.name): \(text)"
+        }
+        else
+        {
+            return "text is nil"
+        }
+    }
+    init(name: String, text: String? = nil)
+    {
+        self.name = name
+        self.jValue = text
+        println("初始化闭包")
+    }
+    deinit
+    {
+        println("闭包释放")
+    }
+}
+
+class ViewController: UIViewController {
+    
+    func downloadImage()
+    {
+        println("download image")
+    }
+    
+    var thread1: NSThread?
+    var thread2: NSThread?
+    let conditon1 = NSCondition()
+    let conditon2 = NSCondition()
+    
+    func method1()
+    {
+        for i in 1..<10
+        {
+            println("Thread 1 running \(i)")
+            sleep(1)
+            
+            if i == 2
+            {
+                thread2!.start()
+                conditon1.lock()
+                conditon1.wait()
+                conditon1.unlock()
+            }
+        }
+        println("Thread 1 over")
+        conditon2.signal()
+    }
+    
+    func method2()
+    {
+        for i in 1..<10
+        {
+            println("Thread 2 running \(i)")
+            sleep(1)
+            
+            if i == 5
+            {
+                conditon1.signal()
+                
+                conditon2.lock()
+                conditon2.wait()
+                conditon2.unlock()
+            }
+        }
+        println("Thread 2 over")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -438,6 +639,62 @@ class ViewController: UIViewController {
         println("apple".biological)
         let apple = "apple"
         println("\(apple) is a kind of " + apple.printStringrKinds())
+//协议
+        let generator = EncryptionGenerator()
+        println("Certificate Key: \(generator.certificate())")
+        
+        var lightSwitch = OnOffSwitch.Off
+        lightSwitch.canBeModified()
+        
+        var newProtocolType = ProtocolType(cerTemp: EncryptionGenerator())
+        let newCer = newProtocolType.newCertificate()
+        println((newCer))
+        
+        var regView = RegistrationView()
+        regView.registration()
+        
+//ARC
+        var exam1: Exam?
+        var exam2: Exam?
+        var exam3: Exam?
+        exam1 = Exam(na: "计算机")
+        exam2 = exam1
+        exam3 = exam1
+        
+        exam1 = nil
+        exam2 = nil
+        exam3 = nil
+        
+        var teacher: Teacher?
+        var student: Student?
+        teacher = Teacher(name: "王老师")
+        student = Student(name: "李学生")
+        teacher!.student = student
+        student!.teacher = teacher
+        
+        teacher = nil
+        student = nil
+        println("类实例之间的循环强引用－－内存泄漏测试完毕")
+        
+        var paragraph: JsonElement? = JsonElement(name: "p", text: "hello world")
+        println(paragraph!.asJson())
+        paragraph = nil
+        
+//多线程
+        self.downloadImage()
+        
+//        NSThread.detachNewThreadSelector("downloadImage", toTarget: self, withObject: nil)
+//        var tempThread: NSThread?
+//        tempThread = NSThread(target: self, selector: "downloadImage", object: nil)
+//        tempThread!.start()
+        
+//        thread2 = NSThread(target: self, selector: "method2", object: nil)
+//        thread1 = NSThread(target: self, selector: "method1", object: nil)
+//        thread1!.start()
+        
+        var operation: DrinkOperation = DrinkOperation()
+        var queue: NSOperationQueue = NSOperationQueue()
+        queue.addOperation(operation)
     }
 
     override func didReceiveMemoryWarning() {
