@@ -392,6 +392,7 @@
 				EB5393E01B2C6A5800C22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB5393E11B2C6A5800C22A1A /* Build configuration list for PBXNativeTarget "SwiftClassP2C3Tests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +401,7 @@
 				EB5393E31B2C6A5800C22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
