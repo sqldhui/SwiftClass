@@ -12,6 +12,12 @@
 		1844B0BD1B2D713F009DD624 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1844B0BC1B2D713F009DD624 /* Images.xcassets */; };
 		1844B0C01B2D713F009DD624 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1844B0BE1B2D713F009DD624 /* LaunchScreen.xib */; };
 		1844B0CC1B2D713F009DD624 /* SwiftClassP2C4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844B0CB1B2D713F009DD624 /* SwiftClassP2C4Tests.swift */; };
+		18BC73741B2FF730003E2177 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC73731B2FF730003E2177 /* ScrollViewController.swift */; };
+		18BC73761B2FFA7F003E2177 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC73751B2FFA7F003E2177 /* WebViewController.swift */; };
+		18BC737A1B2FFCA4003E2177 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC73791B2FFCA4003E2177 /* PickerViewController.swift */; };
+		18BC737C1B2FFF5C003E2177 /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC737B1B2FFF5C003E2177 /* BarViewController.swift */; };
+		18BC737E1B3004CA003E2177 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC737D1B3004CA003E2177 /* NavigationViewController.swift */; };
+		18BC73801B300706003E2177 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC737F1B300706003E2177 /* TabBarController.swift */; };
 		18F6561A1B2ED25200281ACD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F656191B2ED25200281ACD /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +41,12 @@
 		1844B0C51B2D713F009DD624 /* SwiftClassP2C4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftClassP2C4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1844B0CA1B2D713F009DD624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1844B0CB1B2D713F009DD624 /* SwiftClassP2C4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassP2C4Tests.swift; sourceTree = "<group>"; };
+		18BC73731B2FF730003E2177 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		18BC73751B2FFA7F003E2177 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		18BC73791B2FFCA4003E2177 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		18BC737B1B2FFF5C003E2177 /* BarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
+		18BC737D1B3004CA003E2177 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		18BC737F1B300706003E2177 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		18F656191B2ED25200281ACD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +92,12 @@
 				1844B0B51B2D713F009DD624 /* AppDelegate.swift */,
 				1844B0B71B2D713F009DD624 /* ViewController.swift */,
 				18F656191B2ED25200281ACD /* ListViewController.swift */,
+				18BC73731B2FF730003E2177 /* ScrollViewController.swift */,
+				18BC73751B2FFA7F003E2177 /* WebViewController.swift */,
+				18BC73791B2FFCA4003E2177 /* PickerViewController.swift */,
+				18BC737B1B2FFF5C003E2177 /* BarViewController.swift */,
+				18BC737D1B3004CA003E2177 /* NavigationViewController.swift */,
+				18BC737F1B300706003E2177 /* TabBarController.swift */,
 				1844B0BC1B2D713F009DD624 /* Images.xcassets */,
 				1844B0BE1B2D713F009DD624 /* LaunchScreen.xib */,
 				1844B0B31B2D713F009DD624 /* Supporting Files */,
@@ -211,9 +229,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BC737E1B3004CA003E2177 /* NavigationViewController.swift in Sources */,
+				18BC737A1B2FFCA4003E2177 /* PickerViewController.swift in Sources */,
 				1844B0B81B2D713F009DD624 /* ViewController.swift in Sources */,
+				18BC73801B300706003E2177 /* TabBarController.swift in Sources */,
 				1844B0B61B2D713F009DD624 /* AppDelegate.swift in Sources */,
 				18F6561A1B2ED25200281ACD /* ListViewController.swift in Sources */,
+				18BC73761B2FFA7F003E2177 /* WebViewController.swift in Sources */,
+				18BC73741B2FF730003E2177 /* ScrollViewController.swift in Sources */,
+				18BC737C1B2FFF5C003E2177 /* BarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

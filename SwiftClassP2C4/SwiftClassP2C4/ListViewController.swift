@@ -15,6 +15,8 @@ class ListViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     override func viewDidLoad()
     {
+        super.viewDidLoad()
+        
         var listTabelView: UITableView = UITableView(frame: CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20), style: UITableViewStyle.Grouped)
         listTabelView.delegate = self
         listTabelView.dataSource = self
@@ -39,6 +41,7 @@ class ListViewController: UIViewController , UITableViewDataSource, UITableViewD
             cell!.selectionStyle = .Gray
             cell!.accessoryType = .DisclosureIndicator
         }
+        cell?.textLabel?.text = items[indexPath.row]
         return cell!
     }
 }
