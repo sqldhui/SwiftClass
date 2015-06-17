@@ -12,6 +12,8 @@
 		1841D2D61B3128C20057915B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1841D2D41B3128C20057915B /* Main.storyboard */; };
 		1841D2D81B3128C20057915B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1841D2D71B3128C20057915B /* Images.xcassets */; };
 		1841D2E71B3128C30057915B /* SwiftClassP2C7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841D2E61B3128C30057915B /* SwiftClassP2C7Tests.swift */; };
+		1841D35E1B315F600057915B /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841D35D1B315F600057915B /* AudioViewController.swift */; };
+		1841D3651B3162820057915B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1841D3641B3162820057915B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		1841D2E01B3128C30057915B /* SwiftClassP2C7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftClassP2C7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1841D2E51B3128C30057915B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1841D2E61B3128C30057915B /* SwiftClassP2C7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassP2C7Tests.swift; sourceTree = "<group>"; };
+		1841D35D1B315F600057915B /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		1841D3641B3162820057915B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1841D3651B3162820057915B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +62,7 @@
 		1841D2C21B3128C20057915B = {
 			isa = PBXGroup;
 			children = (
+				1841D3631B3162760057915B /* Framework */,
 				1841D2CD1B3128C20057915B /* SwiftClassP2C7 */,
 				1841D2E31B3128C30057915B /* SwiftClassP2C7Tests */,
 				1841D2CC1B3128C20057915B /* Products */,
@@ -77,6 +83,7 @@
 			children = (
 				1841D2D01B3128C20057915B /* AppDelegate.swift */,
 				1841D2D21B3128C20057915B /* ViewController.swift */,
+				1841D35D1B315F600057915B /* AudioViewController.swift */,
 				1841D2D41B3128C20057915B /* Main.storyboard */,
 				1841D2D71B3128C20057915B /* Images.xcassets */,
 				1841D2CE1B3128C20057915B /* Supporting Files */,
@@ -107,6 +114,14 @@
 				1841D2E51B3128C30057915B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1841D3631B3162760057915B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				1841D3641B3162820057915B /* AVFoundation.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +225,7 @@
 			files = (
 				1841D2D31B3128C20057915B /* ViewController.swift in Sources */,
 				1841D2D11B3128C20057915B /* AppDelegate.swift in Sources */,
+				1841D35E1B315F600057915B /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +415,7 @@
 				1841D2EC1B3128C30057915B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1841D2ED1B3128C30057915B /* Build configuration list for PBXNativeTarget "SwiftClassP2C7Tests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +424,7 @@
 				1841D2EF1B3128C30057915B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
