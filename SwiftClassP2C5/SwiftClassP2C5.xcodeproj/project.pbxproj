@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1841D2821B31182A0057915B /* SwiftClassDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1841D2811B31182A0057915B /* SwiftClassDB.sqlite */; };
+		1841D2841B31183F0057915B /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841D2831B31183F0057915B /* DBViewController.swift */; };
+		1841D2891B3118B80057915B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1841D2881B3118B80057915B /* libsqlite3.dylib */; };
+		1841D28D1B3118EA0057915B /* TestC.c in Sources */ = {isa = PBXBuildFile; fileRef = 1841D28B1B3118EA0057915B /* TestC.c */; };
+		1841D28F1B3119990057915B /* DatabaseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1841D28E1B3119990057915B /* DatabaseOperations.swift */; };
 		18BC73901B300A4F003E2177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC738F1B300A4F003E2177 /* AppDelegate.swift */; };
 		18BC73921B300A4F003E2177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC73911B300A4F003E2177 /* ViewController.swift */; };
 		18BC73971B300A4F003E2177 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BC73961B300A4F003E2177 /* Images.xcassets */; };
@@ -24,6 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1841D2811B31182A0057915B /* SwiftClassDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiftClassDB.sqlite; sourceTree = "<group>"; };
+		1841D2831B31183F0057915B /* DBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
+		1841D2881B3118B80057915B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		1841D28A1B3118EA0057915B /* SwiftClassP2C5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftClassP2C5-Bridging-Header.h"; sourceTree = "<group>"; };
+		1841D28B1B3118EA0057915B /* TestC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TestC.c; sourceTree = "<group>"; };
+		1841D28C1B3118EA0057915B /* TestC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestC.h; sourceTree = "<group>"; };
+		1841D28E1B3119990057915B /* DatabaseOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseOperations.swift; sourceTree = "<group>"; };
 		18BC738A1B300A4F003E2177 /* SwiftClassP2C5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftClassP2C5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BC738E1B300A4F003E2177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BC738F1B300A4F003E2177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1841D2891B3118B80057915B /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +65,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1841D2871B3118A20057915B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				1841D2881B3118B80057915B /* libsqlite3.dylib */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		18BC73811B300A4F003E2177 = {
 			isa = PBXGroup;
 			children = (
+				1841D2871B3118A20057915B /* Framework */,
 				18BC738C1B300A4F003E2177 /* SwiftClassP2C5 */,
 				18BC73A21B300A4F003E2177 /* SwiftClassP2C5Tests */,
 				18BC738B1B300A4F003E2177 /* Products */,
@@ -73,10 +95,16 @@
 		18BC738C1B300A4F003E2177 /* SwiftClassP2C5 */ = {
 			isa = PBXGroup;
 			children = (
+				1841D2811B31182A0057915B /* SwiftClassDB.sqlite */,
 				18BC738F1B300A4F003E2177 /* AppDelegate.swift */,
 				18BC73911B300A4F003E2177 /* ViewController.swift */,
+				1841D2831B31183F0057915B /* DBViewController.swift */,
+				1841D28E1B3119990057915B /* DatabaseOperations.swift */,
 				18BC73961B300A4F003E2177 /* Images.xcassets */,
 				18BC738D1B300A4F003E2177 /* Supporting Files */,
+				1841D28B1B3118EA0057915B /* TestC.c */,
+				1841D28C1B3118EA0057915B /* TestC.h */,
+				1841D28A1B3118EA0057915B /* SwiftClassP2C5-Bridging-Header.h */,
 			);
 			path = SwiftClassP2C5;
 			sourceTree = "<group>";
@@ -186,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1841D2821B31182A0057915B /* SwiftClassDB.sqlite in Resources */,
 				18BC73971B300A4F003E2177 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BC73921B300A4F003E2177 /* ViewController.swift in Sources */,
+				1841D2841B31183F0057915B /* DBViewController.swift in Sources */,
+				1841D28F1B3119990057915B /* DatabaseOperations.swift in Sources */,
 				18BC73901B300A4F003E2177 /* AppDelegate.swift in Sources */,
+				1841D28D1B3118EA0057915B /* TestC.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,9 +346,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftClassP2C5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftClassP2C5/SwiftClassP2C5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -325,9 +360,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftClassP2C5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftClassP2C5/SwiftClassP2C5-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -384,6 +421,7 @@
 				18BC73AB1B300A4F003E2177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18BC73AC1B300A4F003E2177 /* Build configuration list for PBXNativeTarget "SwiftClassP2C5Tests" */ = {
 			isa = XCConfigurationList;
@@ -392,6 +430,7 @@
 				18BC73AE1B300A4F003E2177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

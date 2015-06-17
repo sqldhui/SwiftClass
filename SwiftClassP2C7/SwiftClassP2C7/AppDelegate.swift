@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SwiftClassP2C5
+//  SwiftClassP2C7
 //
-//  Created by apple on 15/6/16.
+//  Created by apple on 15/6/17.
 //  Copyright (c) 2015年 cipnet. All rights reserved.
 //
 
@@ -16,13 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.backgroundColor = UIColor.whiteColor()
-        var isKeyWindow = self.window!.keyWindow
-        self.window!.makeKeyAndVisible()
-        
-        var viewCtrl = DBViewController()
-        self.window?.rootViewController = viewCtrl
         return true
     }
 
