@@ -80,6 +80,8 @@ class NewClass
         var count: Int = 50
         println((count))
         println((self.count))
+        @IBAction func btnClicked(sender: UIButton) {
+        }
     }
 }
 
